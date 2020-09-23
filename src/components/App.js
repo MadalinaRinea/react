@@ -32,7 +32,24 @@ function App() {
                 <Route exact path="/" component={ () => <h1>Homepage</h1> } />
                 <Route exact path="/games" component={ GamesList } />
                 <Route exact path="/games/:id" component={ GameDetails } />
+                <Route exact path="/weather" component={ Wheather } />
             </Router>
+        </div>
+    );
+}
+
+export default App;
+
+
+import React from 'react';
+import Colors from './Colors/Colors';
+
+//JSX
+function App() {
+    return (
+        <div>
+            <h1>Colors</h1>
+            <Colors />
         </div>
     );
 }
