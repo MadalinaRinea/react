@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 
 let arrOfColors = ['#cacaca', '#bada55', '#ff0000'];
 
-function Counter() {
-    const [color, setColor] =  useState(0);
+function Colors() {
+    const [color, setColor] =  useState('');
 
-    function handleChange(col) {
+    function handleChange() {
         for (let i = 0; i < arrOfColors.length; i++) {
             setColor((i+1)%3);
         }
-        setColor(count + diff);
     }
 
     return( 
         <div >
-            <button onClick={ () => handleChange() }>+</button>
-            {/* <strong className={ count >= 0 ? styles['output--positive'] : styles['output--negative'] }>{ count }</strong> */}
+            <strong className={ arrOfColors[color]}>{ 'Currently Selected Colors:' + color}</strong>
+            <button onClick={ () => handleChange() }>Change Color</button>
         </div>
     )
 }
