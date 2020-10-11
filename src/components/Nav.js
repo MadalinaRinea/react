@@ -15,6 +15,9 @@ export default function Nav() {
                     <li className="nav-item">
                         <NavLink className="nav-link" exact to="/games">Games</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" exact to="/weather">Weather</NavLink>
+                    </li>
                 </ul>
             </div>
         </nav>
